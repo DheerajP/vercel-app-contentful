@@ -23,7 +23,7 @@ export default async function PostPage({
   params: { slug: string };
 }) {
   const { isEnabled } = draftMode();
-  const { post, morePosts } = await getPostAndMorePosts(params.slug, true);
+  const { post, morePosts } = await getPostAndMorePosts(params.slug, isEnabled);
 
   return (
     <div className="container mx-auto px-5">
